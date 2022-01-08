@@ -30,7 +30,7 @@ phone.addEventListener('input',function(){
     .textContent="";
     }else{
         errorTel
-    .textContent="Phone number is incorrect";
+    .textContent="Phone number is not correct";
     }
 });
 
