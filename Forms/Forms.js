@@ -9,6 +9,31 @@ text.addEventListener('input', function () {
         textError.textContent = errorMsg;
     }
 });
+
+const email = document.querySelector('#email');
+const emailError = document.querySelector('.email-error');
+email.addEventListener('input',function(){
+    let emailRegex = RegExp('^[0-9a-zA-Z+-._]+@[-+_.0-9a-zA-Z]*.[a-zA-Z]{2,3}.([a-zA-z]{2,3})$');
+    if(emailRegex.test(email.value)){
+        emailError.textContent="";
+    }else{
+        emailError.textContent="Email is InValid";
+    }
+});
+
+const phone = document.querySelector('#tel');
+const errorTel = document.querySelector('.tel-error');
+phone.addEventListener('input',function(){
+    let phoneRegex = RegExp('^[+][0-9]{1,}\\s?[1-9]{1}[0-9]{9}$');
+    if(phoneRegex.test(phone.value)){
+        errorTel
+    .textContent="";
+    }else{
+        errorTel
+    .textContent="Phone number is incorrect";
+    }
+});
+
 const salary = document.querySelector('#salary');
 const output = document.querySelector('.salary-output');
 output.textContent = salary.value;
